@@ -2,15 +2,32 @@
   const name = "Vishwas";
   const html = "<h1>Hello World</h1>";
   const disabled = "true";
+  const green = true;
+  const red = "red";
+  const underline = "red";
+  const number = 3;
+  const isPromoted = true;
 </script>
 
 <main>
   <h1>Hello {@html html}</h1>
-  
   <button {disabled}>Bind</button>
+  <button class={green ? number > 2 : underline}>Button</button>
+  <h2 class:promoted={isPromoted}>Flapjack!</h2>
 </main>
 
 <style>
+  .red {
+    color: red;
+  }
+  .green {
+    color: green;
+  }
+
+  .promoted {
+    color: purple;
+  }
+
   main {
     text-align: center;
     padding: 1em;
